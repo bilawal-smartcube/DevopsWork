@@ -23,7 +23,7 @@ pipeline {
     stage ('Deploy to Tomcat') {
       steps {
         sshagent(['root']){
-            sh 'sshpass -p "P@ssw0rd" scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/CICD Pipline/target/WebApp.war root@192.168.11.19:/prod/apache-tomcat-9.0.71/webapps/webapp.war'    
+            sh 'sshpass -p "P@ssw0rd" scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/CICD Pipline/target/WebApp.war root@192.168.11.19:/prod/apache-tomcat-10.0.27/webapps/webapp.war'    
         
         }
        }
